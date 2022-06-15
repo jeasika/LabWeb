@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+
+.importantText {
+    font-size: 2em;
+    margin: auto;
+    padding: auto;
+    border: auto;
+}

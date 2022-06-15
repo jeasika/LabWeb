@@ -1,0 +1,46 @@
+<form [formGroup]="reportarForm" class="form-container">
+    <mat-card>
+      <mat-card-title>Reportar</mat-card-title>
+      <mat-card-content>
+        <div class="collectData">
+          <mat-label>Campus*</mat-label>
+          <mat-select>
+            <mat-option value="Aguascalientes">Aguascalientes</mat-option>
+            <mat-option value="Chiapas">Chiapas</mat-option>
+            <mat-option value="Chihuahua">Chihuahua</mat-option>
+            <mat-option value="Ciudad de México">Ciudad de México</mat-option>
+            <mat-option value="Ciudad Juárez">Ciudad Juárez</mat-option>
+            <mat-option value="Ciudad Obregón">Ciudad Obregón</mat-option>
+            <mat-option value="Cuernavaca">Cuernavaca</mat-option>
+            <mat-option value="Estado de México">Estado de México</mat-option>
+            <mat-option value="Guadalajara">Guadalajara</mat-option>
+            <mat-option value="Hidalgo">Hidalgo</mat-option>
+            <mat-option value="Irapuato">Irapuato</mat-option>
+            <mat-option value="Laguna">Laguna</mat-option>
+            <mat-option value="León">León</mat-option>
+            <mat-option value="Monterrey">Monterrey</mat-option>
+            <mat-option value="Morelia">Morelia</mat-option>
+            <mat-option value="Puebla">Puebla</mat-option>
+            <mat-option value="Querétaro">Querétaro</mat-option>
+            <mat-option value="Saltillo">Saltillo</mat-option>
+            <mat-option value="San Luis Potosí">San Luis Potosí</mat-option>
+            <mat-option value="Santa Fe">Santa Fe</mat-option>
+            <mat-option value="Sinaloa">Sinaloa</mat-option>
+            <mat-option value="Sonora Norte">Sonora Norte</mat-option>
+            <mat-option value="Tampico">Tampico</mat-option>
+            <mat-option value="Toluca">Toluca</mat-option>
+            <mat-option value="Zacatecas">Zacatecas</mat-option>
+          </mat-select>
+
+          <mat-label>Ubicación</mat-label>
+            <input matInput #input placeholder="Ubicación*">
+          
+          <mat-label>Categoría</mat-label>
+            <input matInput #input placeholder="Categoría*">
+
+          <mat-label>Comentario</mat-label>
+            <input matInput #input placeholder="Comentario">
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>

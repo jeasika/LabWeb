@@ -1,0 +1,31 @@
+.title {
+    color: #0474A9;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 150%;
+    border: auto;
+}
+
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+}
+
+.mat-accordion {
+    display: grid;
+    margin: auto;
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.mat-expansion-panel-header-title {
+    color: white;
+}
+.mat-expansion-panel {
+    background: #11A1B7;
+    color: white;
+}
+
+.phonenum {
+    text-align: center;
+    margin: 1%;
+}

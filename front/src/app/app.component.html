@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="LostNFound">
   <head>
-    <title>LostAndFound</title>
+    <title>LostNFound</title>
     <script src="app\app.js"></script>
   </head>
   <body>
-    <header ng-include="'header.html'"></header>
-    <main ng-view></main>
+    <mat-toolbar color="primary" class="navbar">
+      <div class="titlenav">Lost and Found</div>
+      
+      <div class="bodynav">
+        <button mat-button routerLink="/home">INICIO</button>
+        <button mat-button routerLink="/objetosperdidos">OBJETOS PERDIDOS</button>
+        <button mat-button routerLink="/reportarobjetos">REPORTAR OBJETOS</button>
+        <button mat-button routerLink="/faq">FAQ</button>
+        <button mat-button>LOGIN</button>
+      </div>
+  </mat-toolbar>
+
+  <router-outlet>
+
+  </router-outlet>
   </body>
 </html>
