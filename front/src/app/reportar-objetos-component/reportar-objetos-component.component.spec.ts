@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ReportarObjetosComponentComponent } from './reportar-objetos-component.component';
+
+
 
 describe('ReportarObjetosComponentComponent', () => {
   let component: ReportarObjetosComponentComponent;
