@@ -1,46 +1,49 @@
-<form [formGroup]="reportarForm" class="form-container">
-    <mat-card>
-      <mat-card-title>Reportar</mat-card-title>
-      <mat-card-content>
-        <div class="collectData">
-          <mat-label>Campus*</mat-label>
-          <mat-select>
-            <mat-option value="Aguascalientes">Aguascalientes</mat-option>
-            <mat-option value="Chiapas">Chiapas</mat-option>
-            <mat-option value="Chihuahua">Chihuahua</mat-option>
-            <mat-option value="Ciudad de México">Ciudad de México</mat-option>
-            <mat-option value="Ciudad Juárez">Ciudad Juárez</mat-option>
-            <mat-option value="Ciudad Obregón">Ciudad Obregón</mat-option>
-            <mat-option value="Cuernavaca">Cuernavaca</mat-option>
-            <mat-option value="Estado de México">Estado de México</mat-option>
-            <mat-option value="Guadalajara">Guadalajara</mat-option>
-            <mat-option value="Hidalgo">Hidalgo</mat-option>
-            <mat-option value="Irapuato">Irapuato</mat-option>
-            <mat-option value="Laguna">Laguna</mat-option>
-            <mat-option value="León">León</mat-option>
-            <mat-option value="Monterrey">Monterrey</mat-option>
-            <mat-option value="Morelia">Morelia</mat-option>
-            <mat-option value="Puebla">Puebla</mat-option>
-            <mat-option value="Querétaro">Querétaro</mat-option>
-            <mat-option value="Saltillo">Saltillo</mat-option>
-            <mat-option value="San Luis Potosí">San Luis Potosí</mat-option>
-            <mat-option value="Santa Fe">Santa Fe</mat-option>
-            <mat-option value="Sinaloa">Sinaloa</mat-option>
-            <mat-option value="Sonora Norte">Sonora Norte</mat-option>
-            <mat-option value="Tampico">Tampico</mat-option>
-            <mat-option value="Toluca">Toluca</mat-option>
-            <mat-option value="Zacatecas">Zacatecas</mat-option>
-          </mat-select>
+<mat-card class="example-form" tabindex="0">
+  <mat-card-title>Reportar Objetos</mat-card-title>
+  <mat-card-subtitle>Ingrese la siguiente información para reportar un objeto perdido y que se pueda mostra en la pagina de objetos perdidos.</mat-card-subtitle>
+  <mat-form-field appearance="fill" [color]="colorControl.value">
+    <mat-label>Campus*</mat-label>
+    <mat-select [formControl]="colorControl">
+      <mat-option value="Aguascalientes">Aguascalientes</mat-option>
+      <mat-option value="Chiapas">Chiapas</mat-option>
+      <mat-option value="Chihuahua">Chihuahua</mat-option>
+      <mat-option value="Ciudad de México">Ciudad de México</mat-option>
+      <mat-option value="Ciudad Juárez">Ciudad Juárez</mat-option>
+      <mat-option value="Ciudad Obregón">Ciudad Obregón</mat-option>
+      <mat-option value="Cuernavaca">Cuernavaca</mat-option>
+      <mat-option value="Estado de México">Estado de México</mat-option>
+      <mat-option value="Guadalajara">Guadalajara</mat-option>
+      <mat-option value="Hidalgo">Hidalgo</mat-option>
+      <mat-option value="Irapuato">Irapuato</mat-option>
+      <mat-option value="Laguna">Laguna</mat-option>
+      <mat-option value="León">León</mat-option>
+      <mat-option value="Monterrey">Monterrey</mat-option>
+      <mat-option value="Morelia">Morelia</mat-option>
+      <mat-option value="Puebla">Puebla</mat-option>
+      <mat-option value="Querétaro">Querétaro</mat-option>
+      <mat-option value="Saltillo">Saltillo</mat-option>
+      <mat-option value="San Luis Potosí">San Luis Potosí</mat-option>
+      <mat-option value="Santa Fe">Santa Fe</mat-option>
+      <mat-option value="Sinaloa">Sinaloa</mat-option>
+      <mat-option value="Sonora Norte">Sonora Norte</mat-option>
+      <mat-option value="Tampico">Tampico</mat-option>
+      <mat-option value="Toluca">Toluca</mat-option>
+      <mat-option value="Zacatecas">Zacatecas</mat-option>
+    </mat-select>
+   </mat-form-field>
 
-          <mat-label>Ubicación</mat-label>
-            <input matInput #input placeholder="Ubicación*">
-          
-          <mat-label>Categoría</mat-label>
-            <input matInput #input placeholder="Categoría*">
-
-          <mat-label>Comentario</mat-label>
-            <input matInput #input placeholder="Comentario">
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </form>
+   <mat-form-field appearance="fill">
+     <mat-label>Categoria</mat-label>
+      <input matInput  [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  <p>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Comentario</mat-label>
+      <textarea matInput placeholder="Ex. Es negra, con una mancha café..."></textarea>
+    </mat-form-field>
+  </p>
+    <mat-card-actions>
+    <button mat-raised-button>Enviar</button>
+    </mat-card-actions>
+</mat-card>
