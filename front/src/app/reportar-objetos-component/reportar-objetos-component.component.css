@@ -1,5 +1,15 @@
-.container{
+.example-form {
     margin: auto;
-    border-radius: 1%;
-    align-items: center;
-}
+    top: 40px;
+    min-width: 150px;
+    max-width: 405px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
