@@ -11,6 +11,9 @@ export class ReportarObjetosComponentComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder){}
 
+  campus = new FormControl('', Validators.required);
+  categoria = new FormControl('', [Validators.required]);
+
   reportarForm = this.formBuilder.group({
     campus: new FormControl(),
     categoria: new FormControl(),
@@ -20,9 +23,6 @@ export class ReportarObjetosComponentComponent implements OnInit {
   onFormSubmit(): void {
     console.log(this.reportarForm.value);
   } 
-  
-  campus = new FormControl('', Validators.required);
-  categoria = new FormControl('', [Validators.required]);
 
   ngOnInit(): void {}
 
