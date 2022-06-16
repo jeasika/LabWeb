@@ -1,4 +1,9 @@
-.example-form {
+.title {
+  color: #0474A9;
+  font-size: 150%;
+}
+
+.form {
     margin: auto;
     top: 40px;
     min-width: 150px;
@@ -6,10 +11,11 @@
     width: 100%;
   }
   
-  .example-full-width {
+  .full-width {
     width: 100%;
   }
   
-  td {
-    padding-right: 8px;
+  .button {
+    background: #11A1B7;
+    color: white;
   }

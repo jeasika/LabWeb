@@ -1,9 +1,13 @@
-<mat-card class="example-form" tabindex="0">
-  <mat-card-title>Reportar Objetos</mat-card-title>
-  <mat-card-subtitle>Ingrese la siguiente información para reportar un objeto perdido y que se pueda mostra en la pagina de objetos perdidos.</mat-card-subtitle>
-  <mat-form-field appearance="fill" [color]="colorControl.value">
-    <mat-label>Campus*</mat-label>
-    <mat-select [formControl]="colorControl">
+<mat-card class="form" tabindex="0">
+<form [formGroup]="reportarForm" (ngSubmit)="onFormSubmit()">
+
+  <mat-card-title class="title">Reportar Objetos</mat-card-title>
+  <p><mat-card-subtitle>Ingrese la siguiente información para reportar un objeto perdido y que se pueda mostra en la pagina de objetos perdidos.</mat-card-subtitle></p>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Campus</mat-label>
+    <!--mat-select [formControl]="colorControl" required-->
+    <mat-select formControlName="campus" required>
       <mat-option value="Aguascalientes">Aguascalientes</mat-option>
       <mat-option value="Chiapas">Chiapas</mat-option>
       <mat-option value="Chihuahua">Chihuahua</mat-option>
@@ -30,26 +34,30 @@
       <mat-option value="Toluca">Toluca</mat-option>
       <mat-option value="Zacatecas">Zacatecas</mat-option>
     </mat-select>
-   </mat-form-field>
+    <mat-error *ngIf="campus.hasError('required')">Debe escoger una ciudad</mat-error>
+  </mat-form-field>
 
-   <mat-form-field appearance="fill">
-     <mat-label>Categoria</mat-label>
-      <input matInput  [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  <p>
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Comentario</mat-label>
-      <textarea matInput placeholder="Ex. Es negra, con una mancha café..."></textarea>
-    </mat-form-field>
-  </p>
+  <mat-form-field appearance="fill">
+    <mat-label>Categoria</mat-label>
+    <!--input matInput  [formControl]="categoria" required-->
+    <input matInput type="text" formControlName="categoria" required>
+    <mat-error *ngIf="categoria.hasError('required')">Debe ingresar una categoria</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Comentarios</mat-label>
+    <!--textarea matInput placeholder="Ex. Es negra, con una mancha café..."></textarea-->
+    <textarea matInput placeholder="Ex. Es negra, con una mancha café..." formControlName="comentarios"></textarea>
+  </mat-form-field>
+
   <p>Suba imagen de objeto perdido.</p>
   <blockquote>
-    <input type="file"
-       id="avatar" name="avatar"
-       accept="image/png, image/jpeg">
+  <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
   </blockquote>
-    <mat-card-actions>
-    <button mat-raised-button>Enviar</button>
-    </mat-card-actions>
+
+  <mat-card-actions>
+    <button type="submit" class="button" mat-raised-button>Enviar</button>
+  </mat-card-actions>
+
+</form>
 </mat-card>
