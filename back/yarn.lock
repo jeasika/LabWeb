@@ -3063,6 +3063,11 @@
   "resolved" "https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz"
   "version" "0.6.3"
 
+"node-bin-setup@^1.0.0":
+  "integrity" "sha512-pTeU6NgUrexiLNtd+AKwvg6cngHMvj5FZ5e2bbv2ogBSIc9yhkXSSaTScfSRZnwHIh5YFmYSYlemLWkiKD7rog=="
+  "resolved" "https://registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.1.0.tgz"
+  "version" "1.1.0"
+
 "node-environment-flags@^1.0.5":
   "integrity" "sha512-5Evy2epuL+6TM0lCQGpFIj6KwiEsGh1SrHUhTbNX+sLbBtjidPZFAnVK9y5yU1+h//RitLbRHTIMyxQPtxMdHw=="
   "resolved" "https://registry.npmjs.org/node-environment-flags/-/node-environment-flags-1.0.6.tgz"
@@ -3075,6 +3080,13 @@
   "integrity" "sha512-XxYDdcQ6eKqp/YjI+tb2C5WM2LgjnZrfYg4vgQt49EK268b6gYCHsBLrK2qvJo4FmCtqmKezb0WZFK4fkrZNsg=="
   "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-2.0.2.tgz"
   "version" "2.0.2"
+
+"node@^16.13.2":
+  "integrity" "sha512-6x0hohLASL0XaehYn1mrVw1UiiRjoxrujBxjqHGxGe/rFKKCJcDhoa5wNxxvBbyJm6mNgZYuzg0JTwvXmpeWWw=="
+  "resolved" "https://registry.npmjs.org/node/-/node-16.13.2.tgz"
+  "version" "16.13.2"
+  dependencies:
+    "node-bin-setup" "^1.0.0"
 
 "nodemon@^2.0.15":
   "integrity" "sha512-gdHMNx47Gw7b3kWxJV64NI+Q5nfl0y5DgDbiVtShiwa7Z0IZ07Ll4RLFo6AjrhzMtoEZn5PDE3/c2AbVsiCkpA=="

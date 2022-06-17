@@ -2,19 +2,99 @@
     <h1 class="title">Objetos perdidos</h1>
     <h2 class="subtitle">Aquí podrá ver la lista de todos los objetos perdidos que han sido registrados como encontrados.</h2>
 </div>
-<mat-card class="card">
-    <mat-card-title>Laptop</mat-card-title>
-    <blockquote>
-        <mat-label>Es una laptop.</mat-label>
-    </blockquote>
-    <img mat-card-image src="https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&w=1000&q=80" alt="Photo of a laptop.">
-    <blockquote>
-        <mat-label>Dispositivos electrónicos</mat-label>
-    </blockquote>
-    <blockquote>
-        <mat-label>Campus Monterrey</mat-label>
-    </blockquote>
-    <mat-card-actions>
-        <button class="button" mat-raised-button>Reclamar</button>
-    </mat-card-actions>
-</mat-card>
+
+{{totalAngularPackages[0]}}
+
+<div *ngFor="let package of totalAngularPackages; let i = index">
+    <div>
+        <mat-card class="card">
+            <blockquote>
+                <mat-label> hola </mat-label>
+            </blockquote>
+            <blockquote>
+                <mat-label>{{totalAngularPackages[i].campus}}</mat-label>
+            </blockquote>
+            <!--
+            <blockquote>
+                <mat-label>{{package.location}}</mat-label>
+            </blockquote>
+            <img mat-card-image src={{package.imageBase64}}>
+            <mat-card-actions>
+                <button class="button" mat-raised-button>Reclamar</button>
+            </mat-card-actions>
+            -->
+        </mat-card>
+    </div>
+</div>
+
+<div>
+    <mat-card class="card">
+        <blockquote>
+            <mat-label>{{totalAngularPackages[0].campus}}</mat-label>
+        </blockquote>
+        <blockquote>
+            <mat-label>{{totalAngularPackages[0].category}}</mat-label>
+        </blockquote>
+        <blockquote>
+            <mat-label>{{totalAngularPackages[0].location}}</mat-label>
+        </blockquote>
+        <img mat-card-image src={{totalAngularPackages[0].imageBase64}}>
+        <mat-card-actions>
+            <button class="button" mat-raised-button>Reclamar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div>
+    <mat-card class="card">
+        <blockquote>
+            <mat-label>{{totalAngularPackages[1].campus}}</mat-label>
+        </blockquote>
+        <blockquote>
+            <mat-label>{{totalAngularPackages[1].category}}</mat-label>
+        </blockquote>
+        <blockquote>
+            <mat-label>{{totalAngularPackages[1].location}}</mat-label>
+        </blockquote>
+        <img mat-card-image src={{totalAngularPackages[1].imageBase64}}>
+        <mat-card-actions>
+            <button class="button" mat-raised-button>Reclamar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div>
+    <mat-card class="card">
+        <blockquote>
+            <mat-label>{{totalAngularPackages[2].campus}}</mat-label>
+        </blockquote>
+        <blockquote>
+            <mat-label>{{totalAngularPackages[2].category}}</mat-label>
+        </blockquote>
+        <blockquote>
+            <mat-label>{{totalAngularPackages[2].location}}</mat-label>
+        </blockquote>
+        <img mat-card-image src={{totalAngularPackages[2].imageBase64}}>
+        <mat-card-actions>
+            <button class="button" mat-raised-button>Reclamar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div>
+    <mat-card class="card">
+        <blockquote>
+            <mat-label>{{totalAngularPackages[3].campus}}</mat-label>
+        </blockquote>
+        <blockquote>
+            <mat-label>{{totalAngularPackages[3].category}}</mat-label>
+        </blockquote>
+        <blockquote>
+            <mat-label>{{totalAngularPackages[3].location}}</mat-label>
+        </blockquote>
+        <img mat-card-image src={{totalAngularPackages[3].imageBase64}}>
+        <mat-card-actions>
+            <button class="button" mat-raised-button>Reclamar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

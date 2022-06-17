@@ -8,19 +8,14 @@ import axios from 'axios';
   styleUrls: ['./objetos-perdidos-component.component.css'],
 })
 export class ObjetosPerdidosComponentComponent implements OnInit {
-  private totalAngularPackages: any = [];
+  totalAngularPackages: any = [];
   constructor(private http: HttpClient) {}
-  ngOnInit(): void {
-    axios
+  async ngOnInit(): Promise<void> {
+    let res = await axios
       .get('http://localhost:3000/api/objects/list', {
         withCredentials: true,
       })
-      .then((res) => {
-        this.totalAngularPackages = { ...res.data };
-        console.log(this.totalAngularPackages);
-      });
-  }
-  public get(url:string){
-    return this.http.get(url);
+      console.log(res.data);
+      this.totalAngularPackages = await res.data;
   }
 }
