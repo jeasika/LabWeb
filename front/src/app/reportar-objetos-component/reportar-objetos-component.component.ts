@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import axios from 'axios';
 
 @Component({
   selector: 'app-reportar-objetos-component',
@@ -36,10 +37,10 @@ export class ReportarObjetosComponentComponent implements OnInit {
     };
     console.log(valuesToSend);
     try {
-      this.http
-        .post<any>('http://localhost:3000/api/objects/create', valuesToSend)
-        .subscribe((data) => {
-          console.log(data);
+      axios
+        .post('http://localhost:3000/api/objects/create', valuesToSend)
+        .then((res) => {
+          console.log(res.data);
         });
     } catch (error) {
       console.log(error);

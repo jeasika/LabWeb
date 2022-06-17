@@ -9,17 +9,22 @@ import axios from 'axios';
 })
 export class AppComponent implements OnInit {
   title = 'lost-and-found';
+  user = undefined;
   async fetchUser(): Promise<any> {
     try {
-      const res = await axios.get('http://localhost:3000/api/user/info');
-      console.log(res);
-      // return res;
+      const res = await axios.get('http://localhost:3000/api/user/info', {
+        withCredentials: true,
+      });
+      return res;
     } catch (error) {
       console.log(error);
     }
   }
 
   ngOnInit(): void {
-    this.fetchUser();
+    this.fetchUser().then((res) => {
+      console.log(res.data.user);
+      if (res.data.user) this.user = { ...res.data.user };
+    });
   }
 }

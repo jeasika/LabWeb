@@ -1,9 +1,10 @@
 import express from 'express';
-import { authRequired } from '../middleware/auth-required';
-import authUser from '../controllers/auth-controller';
+
 const user = express();
 
-user.get('/info', authRequired, (req, res) => {
+user.get('/info', (req, res) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.header('Access-Control-Allow-Credentials', true);
   res.status(200).json({
     user: req.user,
   });
