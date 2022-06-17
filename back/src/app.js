@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import { join } from 'path';
 import session from 'express-session';
 import passport from 'passport';
+import cors from 'cors';
 import { ping, foundObject, auth, user } from './routes';
 
 const app = express();
@@ -12,6 +13,7 @@ const buildPath = join(`${__dirname}/static`);
 app.use(helmet());
 app.use(morgan('common'));
 app.use(express.json());
+app.use(cors());
 
 app.use(
   session({
@@ -34,5 +36,4 @@ app.use(express.static(buildPath));
 app.get('*', (_req, res) => {
   res.sendFile(`${buildPath}/index.html`);
 });
-
 export default app;
