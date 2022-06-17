@@ -15,8 +15,8 @@ auth.get(
 auth.get(
   '/google/callback',
   passport.authenticate('google', {
-    failureRedirect: '/',
-    successRedirect: '/',
+    failureRedirect: 'http://localhost:4200/',
+    successRedirect: 'http://localhost:4200/',
   })
 );
 

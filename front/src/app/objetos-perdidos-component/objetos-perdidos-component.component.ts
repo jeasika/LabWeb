@@ -11,7 +11,7 @@ export class ObjetosPerdidosComponentComponent implements OnInit {
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.http
-      .get<any>('http://localhost:8000/api/objects/list', {
+      .get<any>('http://localhost:3000/api/objects/list', {
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
