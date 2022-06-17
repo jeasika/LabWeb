@@ -33,8 +33,9 @@ export class ReportarObjetosComponentComponent implements OnInit {
     let file = $event.target.files[0];
     let reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = function () {
+    reader.onload = (e) => {
       console.log(reader.result);
+      this.reportarForm.controls['imageBase64'].setValue(reader.result);
     };
     reader.onerror = function (error) {
       console.log('Error: ', error);
