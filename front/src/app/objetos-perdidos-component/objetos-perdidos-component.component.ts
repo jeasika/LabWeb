@@ -22,4 +22,7 @@ export class ObjetosPerdidosComponentComponent implements OnInit {
         this.totalAngularPackages = data;
       });
   }
+  public get(url:string){
+    return this.http.get(url);
+  }
 }
