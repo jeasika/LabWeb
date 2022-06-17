@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import axios from 'axios';
 
 @Component({
   selector: 'app-reportar-objetos-component',
@@ -18,28 +19,43 @@ export class ReportarObjetosComponentComponent implements OnInit {
   campus = new FormControl('', Validators.required);
   category = new FormControl('', [Validators.required]);
   location = new FormControl('', [Validators.required]);
+  imageBase64 =  new FormControl('', [Validators.required]);
 
   reportarForm = this.formBuilder.group({
     campus: new FormControl(),
     location: new FormControl(),
     category: new FormControl(),
     comments: new FormControl(),
+    imageBase64: new FormControl(),
   });
+
+  onChange($event: any) {
+    let file = $event.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = (e) => {
+      console.log(reader.result);
+      this.reportarForm.controls['imageBase64'].setValue(reader.result);
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+   };
+ }
 
   onFormSubmit(): void {
     let currentDate = new Date();
     let valuesToSend = {
       ...this.reportarForm.value,
-      imageBase64: ' ', //TODO: SAVE UPLOADED IMAGE STRING
+      //imageBase64: ' ', //TODO: SAVE UPLOADED IMAGE STRING
       status: 'active',
       dateFound: currentDate.toISOString().split('T')[0],
     };
     console.log(valuesToSend);
     try {
-      this.http
-        .post<any>('http://localhost:8000/api/objects/create', valuesToSend)
-        .subscribe((data) => {
-          console.log(data);
+      axios
+        .post('http://localhost:3000/api/objects/create', valuesToSend)
+        .then((res) => {
+          console.log(res.data);
         });
     } catch (error) {
       console.log(error);
@@ -47,14 +63,4 @@ export class ReportarObjetosComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
-  /*constructor(private formBuilder: FormBuilder){}
-
-  reportarForm = this.formBuilder.group({
-    campus:[''],
-    ubicacion:[''],
-    category:[''],
-    comentarios:['']
-
-  })*/
 }
