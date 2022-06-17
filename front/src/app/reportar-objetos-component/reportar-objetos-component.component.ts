@@ -19,19 +19,33 @@ export class ReportarObjetosComponentComponent implements OnInit {
   campus = new FormControl('', Validators.required);
   category = new FormControl('', [Validators.required]);
   location = new FormControl('', [Validators.required]);
+  imageBase64 =  new FormControl('', [Validators.required]);
 
   reportarForm = this.formBuilder.group({
     campus: new FormControl(),
     location: new FormControl(),
     category: new FormControl(),
     comments: new FormControl(),
+    imageBase64: new FormControl(),
   });
+
+  onChange($event: any) {
+    let file = $event.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      console.log(reader.result);
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+   };
+ }
 
   onFormSubmit(): void {
     let currentDate = new Date();
     let valuesToSend = {
       ...this.reportarForm.value,
-      imageBase64: ' ', //TODO: SAVE UPLOADED IMAGE STRING
+      //imageBase64: ' ', //TODO: SAVE UPLOADED IMAGE STRING
       status: 'active',
       dateFound: currentDate.toISOString().split('T')[0],
     };
@@ -48,14 +62,4 @@ export class ReportarObjetosComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
-  /*constructor(private formBuilder: FormBuilder){}
-
-  reportarForm = this.formBuilder.group({
-    campus:[''],
-    ubicacion:[''],
-    category:[''],
-    comentarios:['']
-
-  })*/
 }
