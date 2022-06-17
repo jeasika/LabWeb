@@ -40,14 +40,20 @@
   <mat-form-field appearance="fill">
     <mat-label>Categoria</mat-label>
     <!--input matInput  [formControl]="categoria" required-->
-    <input matInput type="text" formControlName="categoria" required>
-    <mat-error *ngIf="categoria.hasError('required')">Debe ingresar una categoria</mat-error>
+    <input matInput type="text" formControlName="category" required>
+    <mat-error *ngIf="category.hasError('required')">Debe ingresar una categoria</mat-error>
+  </mat-form-field>
+
+    <mat-form-field appearance="fill">
+    <mat-label>Ubicacion</mat-label>
+    <input matInput type="text" formControlName="location" required>
+    <mat-error *ngIf="location.hasError('required')">Debe ingresar una ubicacion</mat-error>
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>Comentarios</mat-label>
     <!--textarea matInput placeholder="Ex. Es negra, con una mancha café..."></textarea-->
-    <textarea matInput placeholder="Ex. Es negra, con una mancha café..." formControlName="comentarios"></textarea>
+    <textarea matInput placeholder="Ex. Es negra, con una mancha café..." formControlName="comments"></textarea>
   </mat-form-field>
 
   <p>Suba imagen de objeto perdido.</p>
