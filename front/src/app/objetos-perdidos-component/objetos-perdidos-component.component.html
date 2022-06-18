@@ -2,25 +2,24 @@
     <h1 class="title">Objetos perdidos</h1>
     <p>Aquí podrá ver la lista de todos los objetos perdidos que han sido registrados como encontrados.</p>
 </section>
-<div fxLayout="row" fxLayoutWrap>
-    <div *ngFor="let package of totalAngularPackages; let i = index" fxFlex.lg="33" fxFlex.lt-lg="50" fxFlex.xs="100">
-        <div>
-            <mat-card class="card">
-                <blockquote>
-                    <mat-label>{{totalAngularPackages[i].campus}}</mat-label>
-                </blockquote>
-                <blockquote>
-                    <mat-label>{{totalAngularPackages[i].category}}</mat-label>
-                </blockquote>
-                <blockquote>
-                    <mat-label>{{totalAngularPackages[i].location}}</mat-label>
-                </blockquote>
-                <img mat-card-image src={{totalAngularPackages[i].imageBase64}}>
-                <mat-card-actions>
-                    <button class="button" mat-raised-button (click)="onButtonClick()">Reclamar</button>
-                </mat-card-actions>
-            </mat-card>
-        </div>
+
+<div *ngFor="let package of totalAngularPackages; let i = index">
+    <div>
+        <mat-card class="card">
+            <blockquote>
+                <mat-label>{{totalAngularPackages[i].campus}}</mat-label>
+            </blockquote>
+            <blockquote>
+                <mat-label>{{totalAngularPackages[i].category}}</mat-label>
+            </blockquote>
+            <blockquote>
+                <mat-label>{{totalAngularPackages[i].location}}</mat-label>
+            </blockquote>
+            <img mat-card-image src={{totalAngularPackages[i].imageBase64}}>
+            <mat-card-actions>
+                <button class="button" mat-raised-button (click)="onButtonClick()">Reclamar</button>
+            </mat-card-actions>
+        </mat-card>
     </div>
 </div>
 
