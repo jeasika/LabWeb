@@ -18,4 +18,10 @@ export class ObjetosPerdidosComponentComponent implements OnInit {
       console.log(res.data);
       this.totalAngularPackages = await res.data;
   }
+  click : boolean = false;
+
+  onButtonClick(){
+    this.click = !this.click;
+}
+
 }

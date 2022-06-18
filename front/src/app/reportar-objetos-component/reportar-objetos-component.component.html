@@ -1,13 +1,13 @@
 <section class="hero-section-5">
-  <h1 class="title2">Reportar Objetos</h1>
+  <h1 class="title2">Reportar objetos</h1>
   <p>Completa el formulario para reportar un objeto perdido.</p>
 </section>
 
 <mat-card class="form" tabindex="0">
 <form [formGroup]="reportarForm" (ngSubmit)="onFormSubmit()">
 
-  <mat-card-title class="title">Reportar Objetos</mat-card-title>
-  <p><mat-card-subtitle>Ingrese la siguiente información para reportar un objeto perdido y que se pueda mostra en la pagina de objetos perdidos.</mat-card-subtitle></p>
+  <mat-card-title class="title">Reportar objetos</mat-card-title>
+  <p><mat-card-subtitle>Ingrese la siguiente información para reportar un objeto perdido y que se pueda mostrar en la página de objetos perdidos.</mat-card-subtitle></p>
   
   <mat-form-field appearance="fill">
     <mat-label>Campus</mat-label>
@@ -38,19 +38,19 @@
       <mat-option value="Toluca">Toluca</mat-option>
       <mat-option value="Zacatecas">Zacatecas</mat-option>
     </mat-select>
-    <mat-error *ngIf="campus.hasError('required')">Debe escoger una ciudad</mat-error>
+    <mat-error *ngIf="campus.hasError('required')">Debe escoger una ciudad.</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
-    <mat-label>Categoria</mat-label>
+    <mat-label>Categoría</mat-label>
     <input matInput type="text" formControlName="category" required>
-    <mat-error *ngIf="category.hasError('required')">Debe ingresar una categoria</mat-error>
+    <mat-error *ngIf="category.hasError('required')">Debe ingresar una categoría.</mat-error>
   </mat-form-field>
 
     <mat-form-field appearance="fill">
-    <mat-label>Ubicacion</mat-label>
+    <mat-label>Ubicación</mat-label>
     <input matInput type="text" formControlName="location" required>
-    <mat-error *ngIf="location.hasError('required')">Debe ingresar una ubicacion</mat-error>
+    <mat-error *ngIf="location.hasError('required')">Debe ingresar una ubicación.</mat-error>
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
