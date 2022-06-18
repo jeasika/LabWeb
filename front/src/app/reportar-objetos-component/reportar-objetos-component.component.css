@@ -1,3 +1,21 @@
+.title2 {
+  color:aliceblue;
+  margin-left:15px;
+  font-size: 150%;
+  border: auto;
+}
+
+.hero-section-5 {
+  background:#11A1B7;
+  padding: 5px 0 5px;
+}
+
+p{
+  color:aliceblue;
+  margin-left:15px;
+  border: auto;
+}
+
 .title {
   color: #0474A9;
   font-size: 150%;
@@ -5,7 +23,7 @@
 
 .form {
     margin: auto;
-    top: 40px;
+    top: 20px;
     min-width: 150px;
     max-width: 405px;
     width: 100%;
@@ -18,4 +36,16 @@
   .button {
     background: #11A1B7;
     color: white;
+  }
+
+  ::ng-deep .mat-focused .mat-form-field-label {
+    color: #11A1B7 !important;
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    background-color: #11A1B7 !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   background-color: #11A1B7 !important;
   }

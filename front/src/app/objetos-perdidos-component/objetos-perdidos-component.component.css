@@ -1,8 +1,18 @@
 .title {
-  color: #0474A9;
-  margin-top: 3%;
-  text-align: center;
+  color:aliceblue;
+  margin-left:15px;
   font-size: 150%;
+  border: auto;
+}
+
+.hero-section-5 {
+  background:#11A1B7;
+  padding: 5px 0 5px;
+}
+
+p{
+  color:aliceblue;
+  margin-left:15px;
   border: auto;
 }
 

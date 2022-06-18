@@ -3,8 +3,73 @@ body {
 }
 
 .importantText {
-    font-size: 1.5em;
+    font-size: 32px;
+    color: #343a40;
+    font-weight: 500;
     margin: auto;
     padding: auto;
     border: auto;
 }
+
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+}
+
+.text-success{
+    font-weight: 500;
+    font-size: 32px;
+    color: #0474A9;
+}
+
+.hero-section-5 {
+    padding: 200px 0 180px;
+}
+
+div {
+    display: block;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+
+p {
+    color:darkgray;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../../assets/Background_home.png");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .button {
+    background: #11A1B7;
+    color: white;
+  }
